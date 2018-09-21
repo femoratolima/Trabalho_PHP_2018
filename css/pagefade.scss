@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+//Colors
+$darkBlue: #252431;
+$fireOrange: #f17548;
+$white: #fff;
+
+$primary1Color: $darkBlue;
+$primary2Color: $fireOrange;
+$primary3Color: $white;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+		
+		header {
+			padding: 0 2.4em;
+			
+			h1 {
+				font-size: 1em;
+				margin-bottom: 1em;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				color: $primary2Color;
+			}
+
+			h2 {
+				font-size: 1.6em;
+				margin-bottom: 1.5em;
+				font-weight: 300;
+				color: $primary1Color;
+				max-width: 600px;
+				line-height: 1.35;
+				
+				@media screen and (min-width: 640px) {
+					font-size: 2em;
+				}
+			}
+		}
+
+		footer {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 1.5em;
+			
+			a {
+				display: inline-flex;
+				flex-grow: 1;
+				justify-content: center;
+				margin: .5em;
+				color: $primary1Color;
+				font-size: 1em;
+				font-weight: 400;
+				text-decoration: none;
+				padding: 20px 30px;
+				border-radius: 5px;
+				transition: all ease 360ms;
+				background-color: transparent;
+				border: 1px solid $primary1Color;
+			
+				&:hover {
+					border-color: darken($primary2Color, 5%);
+					color: darken($primary2Color, 5%);
+				}
+				
+				&:first-child {
+					background-color: $primary2Color;
+					border-color: transparent;
+					color: $primary3Color;
+					
+					&:hover {
+						color: $primary3Color;
+						background-color: darken($primary2Color, 5%);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+body{
+    background: url(bright-conifer-dawn-1350339.jpg);
+    /*background: #333;*/
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat",sans-serif;
+    color: #f1f1f1b3;
+}
+
+.container{
+    width: 550px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    transform: translate(-50%,-50%);
+    
+    border-radius: 10px;
+    border: 0.49px solid #000;
+}
+    
+
+h1{
+    color: #f1f1f1b3;
+}
+
+.btn{
+    background:#3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    color: #3498db;
+    background: white;
+}

@@ -1,0 +1,61 @@
+<html>
+
+    <head>
+            <meta charset = "UTF-8">
+            <title>Inserir Produto</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+            <link rel="stylesheet" href="frmInsProd.css">
+            <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="pagefadejs/pagefade-min.js"></script>
+    </head>
+
+    <body>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.php">Trabalho PHP</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="lstProd.php">Produto</a>
+                            <a class="nav-item nav-link" href="#">Lista 2</a>
+                            <a class="nav-item nav-link" href="#">Lista 3</a>
+                        </div>
+                    </div>
+                    <form class="form-inline my-2 my-lg-0">
+                            <input type="button" id="logOut" name="logOut"class="btn btn-outline-success btn-sm" onclick="javascript:location.href='logout.php'" value="Deslogar"></input>
+                        </form>
+            </nav>
+            <section class="pagefade" style="display: none">
+        <div class="container col-md-8">
+            <h1 class="display-5 text-center">Cadastrar novo Produto</h1>
+            <form id="frmNovoProd" name="frmNovoProd" method="POST" action="insProd.php">
+                <div class="form-group">
+                    <label for="lblDesc">Descrição:</label>
+                    <input type="text" class="form-control col-md-7" id="txtDesc"
+                         name="txtDesc" placeholder="Informe a descrição do produto">
+                </div>
+
+                <div class="form-group">
+                    <label for="lblQuantidade">Quantidade:</label>
+                    <input type="text" class="form-control col-md-7" id="txtQtd"
+                         name="txtQtd" placeholder="Informe a quantidade de produtos">
+                </div>
+
+                <div class="form-group">
+                    <label for="lblVal">Valor:</label>
+                    <input type="text" class="form-control col-md-7" id="txtVal"
+                         name="txtVal" placeholder="Informe o valor dos produtos">
+                </div>
+
+
+                <input type="submit" id="btEnviar" name="btEnviar" class="btn btn-success" value="Gravar">
+                <input type="reset" id="btLimpar" name="btLimpar" class="btn btn-warning" value="Limpar">
+                <input type="button" id="bt_Cancel" name="bt_Cancel" class="btn btn-danger" value="Cancelar"
+                    onclick="javascripit:location.href='lstProd.php'">
+            </form>
+        </div>
+        </section>
+    </body>
+</html>

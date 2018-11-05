@@ -27,8 +27,8 @@
         header('location: index.php');
    }
    else{
-        echo "Usuário ou senha incorreto.";
-        header('location: login.html');
+    echo"<script language='javascript' type='text/javascript'>alert('Usuário ou senha incorretos!');window.location.href='login.html'</script>";
+        
    }
 
 ?> 

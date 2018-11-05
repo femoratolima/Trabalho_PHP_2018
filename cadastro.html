@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastrar novo usuário</title>
+        <link rel="stylesheet" href="cadastro.css">
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="pagefadejs/pagefade-min.js"></script>
+    </head>
+    <body>
+            <section class="pagefade" style="display: none">
+                    <form id="frmLogin" name="frmLogin" method="POST" action="cadastro.php">
+                    <div class="container">
+                        <i class="fas fa-user-circle fa-5x"></i>
+                        
+                        <form action="login.html" method="post">
+                            <div class="tbox">
+                                <input type="text" id="user" name="user" placeholder="Usuário (apenas letras)" value="" required pattern="[a-z\s]+$">
+                            </div>
+            
+                            <div class="tbox">
+                               <input type="password" id="pwd" name="pwd" placeholder="Senha (min 6 caract.)" value="" required minlength="6">
+                            </div>
+            
+                            <input class="btn" type="submit" name="" value="Cadastrar">
+            
+                        </form>
+                        <a class="b2" href="login.html">Voltar para login</a>
+                    </div>
+                    </form>
+                    </section>
+    </body>
+</html>

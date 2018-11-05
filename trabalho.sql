@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Set-2018 às 00:53
+-- Generation Time: 05-Nov-2018 às 15:12
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -77,13 +77,6 @@ CREATE TABLE `item_compra` (
   `valor` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `item_compra`
---
-
-INSERT INTO `item_compra` (`id`, `compra`, `produto`, `quantidade`, `valor`) VALUES
-(1, 1, 1, 10, 50);
-
 -- --------------------------------------------------------
 
 --
@@ -102,12 +95,14 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id`, `descricao`, `quantidade`, `valor`) VALUES
-(1, 'Arroz', 20, 6),
-(8, 'Banana', 5, 2),
-(9, 'Carvalho', 50, 100),
-(10, 'Cerejeira', 50, 500),
-(11, 'Nogueira', 100, 300),
-(12, 'Cedro', 50, 600);
+(9, 'Carvalho', 100, 100),
+(10, 'Cerejeira', 100, 250),
+(11, 'Nogueira', 100, 150),
+(12, 'Cedro', 100, 200),
+(13, 'Pinho', 100, 75),
+(14, 'Mogno', 100, 85),
+(15, 'Abeto', 100, 100),
+(16, 'Bordo', 100, 300);
 
 -- --------------------------------------------------------
 
@@ -126,7 +121,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `user`, `pwd`) VALUES
-(1, 'fernandomorato', '381e40b2eafcadbb2024e27e5f44a8e1');
+(1, 'fernandomorato', '381e40b2eafcadbb2024e27e5f44a8e1'),
+(4, 'tobias', '2b2731af96cc3d862395993a7ba1188d');
 
 --
 -- Indexes for dumped tables
@@ -185,19 +181,19 @@ ALTER TABLE `compra`
 -- AUTO_INCREMENT for table `item_compra`
 --
 ALTER TABLE `item_compra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

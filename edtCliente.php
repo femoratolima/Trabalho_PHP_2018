@@ -1,8 +1,5 @@
 <?php
 
-    session_start();
-    if(!isset($_SESSION['user']))
-        header("location: ./login.html");
 
     $conexao = mysql_connect("localhost","root",""); 
 	if (!$conexao){
@@ -16,12 +13,13 @@
     }
 
     $id = trim($_POST['txtId']); 
-    $desc = trim($_POST['txtDesc']); 
-    $qtd = trim($_POST['txtQtd']);
-    $val = trim($_POST['txtVal']); 
+    $nome = trim($_POST['txtNome']); 
+    $endereco = trim($_POST['txtEndereco']);
+    $cidade = trim($_POST['txtCidade']); 
+    $email = trim($_POST['txtEmail']);
 
-    if (!empty($desc) && !empty($val)){
-        $sql = "UPDATE produto SET descricao='$desc', quantidade='$qtd', valor='$val' WHERE id='$id';";
+    if (!empty($nome) && !empty($endereco) && !empty($cidade) && !empty($email)){
+        $sql = "UPDATE cliente SET nome='$nome', endereco='$endereco', cidade='$cidade', email='$email', WHERE id='$id';";
         $ins = mysql_query($sql); 
         if (!$ins){
             echo "Erro ao atualizar produto...";
@@ -33,5 +31,5 @@
 	
     }
     
-    header('location: lstProd.php');
+    header('location: lstCliente.php');
 ?>

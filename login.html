@@ -9,26 +9,26 @@
         <script src="pagefadejs/pagefade-min.js"></script>
     </head>
     <body>
-            <section class="pagefade" style="display: none">
+        <section class="pagefade" style="display: none">
         <form id="frmLogin" name="frmLogin" method="POST" action="login.php">
         <div class="container">
             <i class="fas fa-user-circle fa-5x"></i>
             
             <form action="login.html" method="post">
                 <div class="tbox">
-                    <input type="text" id="user" name="user" placeholder="Usuário" value="">
+                    <input type="text" id="user" name="user" placeholder="Usuário" value="" required>
                 </div>
 
                 <div class="tbox">
-                   <input type="password" id="pwd" name="pwd" placeholder="Senha" value="">
+                   <input type="password" id="pwd" name="pwd" placeholder="Senha" value="" required>
                 </div>
 
                 <input class="btn" type="submit" name="" value="Logar">
 
             </form>
-            <a class="b2" href="#">Crie uma conta</a>
+            <a class="b2" href="cadastro.html">Crie uma conta</a>
         </div>
-    </form>
-    </section>
+        </form>
+        </section>
     </body>
 </html>

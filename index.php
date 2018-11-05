@@ -38,9 +38,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="lstProd.php">Produto</a>
-                    <a class="nav-item nav-link" href="lstProd.php">Lista 2</a>
-                    <a class="nav-item nav-link" href="lstProd.php">Lista 3</a>
+                    <a class="nav-item nav-link" href="lstProd.php">Produtos</a>
+                    <a class="nav-item nav-link" href="lstCliente.php">Clientes</a>
+                    <a class="nav-item nav-link" href="lstVenda.php">Vendas</a>
                 </div>
             </div>
             <form class="form-inline my-2 my-lg-0">
@@ -48,12 +48,7 @@
             </form>
         </nav>
         
-        <section class="pagefade" style="display: none">
-            <div class="container col-md-8 text-center">
-                <h1 class="display-6 text-center">A melhor madeira, da melhor qualidade!</h1>
-                <img src="pexels-photo-374861.jpeg" class="rounded-circle center-block" >
-            </div>
-        </section>      
+        
     </body>    
 </html>
 

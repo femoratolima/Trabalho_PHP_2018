@@ -2,7 +2,7 @@
 
     <head>
             <meta charset = "UTF-8">
-            <title>Inserir Produto</title>
+            <title>Inserir Cliente</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
             <link rel="stylesheet" href="frmInsProd.css">
             <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -29,31 +29,43 @@
             </nav>
             <section class="pagefade" style="display: none">
         <div class="container col-md-8">
-            <h1 class="display-5 text-center">Cadastrar novo Produto</h1>
-            <form id="frmNovoProd" name="frmNovoProd" method="POST" action="insProd.php">
+            <h1 class="display-5 text-center">Cadastrar novo Cliente</h1>
+            <form id="frmNovoProd" name="frmNovoProd" method="POST" action="insCliente.php">
                 <div class="form-group">
-                    <label for="lblDesc">Descrição:</label>
-                    <input type="text" class="form-control col-md-7" id="txtDesc"
-                         name="txtDesc" placeholder="Informe a descrição do produto">
+                    <label for="lblNome">Nome:</label>
+                    <input type="text" class="form-control col-md-7" id="txtNome"
+                         name="txtNome" placeholder="Informe o nome do cliente">
                 </div>
 
                 <div class="form-group">
-                    <label for="lblQuantidade">Quantidade:</label>
-                    <input type="text" class="form-control col-md-7" id="txtQtd"
-                         name="txtQtd" placeholder="Informe a quantidade de produtos">
+                    <label for="lblCidade">Cidade:</label>
+                    <input type="text" class="form-control col-md-7" id="txtCidade"
+                         name="txtCidade" placeholder="Informe a cidade">
                 </div>
 
                 <div class="form-group">
-                    <label for="lblVal">Valor:</label>
-                    <input type="text" class="form-control col-md-7" id="txtVal"
-                         name="txtVal" placeholder="Informe o valor dos produtos">
+                    <label for="lblEndereco">Endereço:</label>
+                    <input type="text" class="form-control col-md-7" id="txtEndereco"
+                         name="txtEndereco" placeholder="Informe o endereço">
+                </div>
+
+                <div class="form-group">
+                    <label for="lblEmail">Email:</label>
+                    <input type="text" class="form-control col-md-7" id="txtEmail"
+                         name="txtEmail" placeholder="Informe o email">
+                </div>
+
+                <div class="form-group">
+                    <label for="lblSaldo">Saldo:</label>
+                    <input type="text" class="form-control col-md-7" id="txtSaldo"
+                         name="txtSaldo" placeholder="Informe o saldo">
                 </div>
 
 
                 <input type="submit" id="btEnviar" name="btEnviar" class="btn btn-success" value="Gravar">
                 <input type="reset" id="btLimpar" name="btLimpar" class="btn btn-warning" value="Limpar">
                 <input type="button" id="bt_Cancel" name="bt_Cancel" class="btn btn-danger" value="Cancelar"
-                    onclick="javascripit:location.href='lstProd.php'">
+                    onclick="javascripit:location.href='lstCliente.php'">
             </form>
         </div>
         </section>

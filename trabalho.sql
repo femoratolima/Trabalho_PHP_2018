@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Nov-2018 às 15:12
+-- Generation Time: 06-Nov-2018 às 21:09
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -42,7 +42,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `endereco`, `cidade`, `email`, `saldo`) VALUES
-(1, 'Fernando Morato', 'João Batista de Freitas, 60', 'Assis', 'femoratolima@hotmail.com', 10000);
+(1, 'Fernando Morato', 'Joï¿½o Batista de Freitas, 60', 'Assis', 'femoratolima@hotmail.com', 10000);
 
 -- --------------------------------------------------------
 
@@ -121,8 +121,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `user`, `pwd`) VALUES
-(1, 'fernandomorato', '381e40b2eafcadbb2024e27e5f44a8e1'),
-(4, 'tobias', '2b2731af96cc3d862395993a7ba1188d');
+(1, 'fernandomorato', '381e40b2eafcadbb2024e27e5f44a8e1');
 
 --
 -- Indexes for dumped tables
@@ -169,7 +168,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `compra`
@@ -193,7 +192,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

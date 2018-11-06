@@ -14,7 +14,7 @@
 
    $id = trim($_REQUEST['id']); //codigo do produto que vai editar
    $rs = mysql_query("SELECT * FROM  cliente where id=".$id);
-   $edita = mysql_fetch_array($rs); 
+   $linha = mysql_fetch_array($rs); 
   // echo $edita['descricao'];
 
 ?>    
@@ -22,10 +22,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Editar Cliente</title>
+        <title>Remover Cliente</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-        <link rel="stylesheet" href="frmEdtProd.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="frmRemProd.css">
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="pagefadejs/pagefade-min.js"></script>
     </head>
@@ -49,38 +49,48 @@
         </nav>
         <section class="pagefade" style="display: none">
         <div class="container col-md-8">
-        <h1 class="text-center">Editar Cliente</h1>
-        <br>
-        <form id="frmEdtCliente" name="frmEdtCliente" method="POST" action="edtCliente.php">
+            <h1 class="text-center">Remover Cliente</h1>
+            <form id="frmRemCliente" name="frmRemCliente" method="POST" action="remCliente.php">
                 <div class="form-group">
-                    <label for="lbltxtId">ID:  <?php echo $edita['id'] ?> </label>
-                    <input type="hidden" id="txtId" name="txtId" value="<?php echo $edita['id'] ?>">
+                    <label for="lblId">
+                        <span class="font-weight-bold">ID: </span>
+                        <span class="font-weight-normal"><?php echo $linha['id']; ?></span>
+                    </label>
+                    <input type="hidden" id="txtId" name="txtId" value="<?php echo $linha['id']; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="lblNome">Nome: </label>
-                    <input type="text" id= "txtNome" name="txtNome" 
-                    class="form-control col-md-5" value = "<?php echo $edita['nome']?>">
+                    <label for="lblNome">
+                        <span class="font-weight-bold">Nome: </span>
+                        <span class="font-weight-normal"><?php echo $linha['nome']; ?></span>
+                    </label>
                 </div>
                 <div class="form-group">
-                    <label for="lblCidade">Cidade: </label>
-                    <input type="text" id= "txtCidade" name="txtCidade" 
-                    class="form-control col-md-5" value = "<?php echo $edita['cidade']?>">
+                    <label for="lblEndereco">
+                        <span class="font-weight-bold">Endereço: </span>
+                        <span class="font-weight-normal"><?php echo $linha['endereco']; ?></span>
+                    </label>
                 </div>
                 <div class="form-group">
-                    <label for="lblEndereco">Endereço:</label>
-                    <input type="text" id= "txtEndereco" name="txtEndereco" 
-                    class="form-control col-md-5" value = "<?php echo $edita['endereco']?>">
-                </div>  
+                    <label for="lblCidade">
+                        <span class="font-weight-bold">Cidade: </span>
+                        <span class="font-weight-normal"><?php echo $linha['cidade']; ?></span>
+                    </label>
+                </div>
                 <div class="form-group">
-                    <label for="lblEmail">Email:</label>
-                    <input type="text" id= "txtEmail" name="txtEmail" 
-                    class="form-control col-md-5" value = "<?php echo $edita['email']?>">
-                </div>  
-                <input type="submit" id="bt_Gravar" name="bt_Gravar" class="btn btn-success"  value="Atualizar">
-                <input type="reset" id="bt_Limpar" name="bt_Limpar" class="btn btn-primary" value="Limpar">
-                <button type="button" id="bt_Cancelar" name="bt_Cancelar" class="btn btn-danger" value="Voltar"
-                 onclick="javascript:location.href='lstCliente.php'"><i class="fas fa-arrow-left" ></i> Voltar </button>            
-         </form>
+                    <label for="lblEmail">
+                        <span class="font-weight-bold">Email: </span>
+                        <span class="font-weight-normal"><?php echo $linha['email']; ?></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="lblSaldo">
+                        <span class="font-weight-bold">Saldo: </span>
+                        <span class="font-weight-normal">R$: <?php echo $linha['saldo']; ?></span>
+                    </label>
+                </div>
+                <button name="btRem" id="btRem" class="btn btn-success" type="submit"><i class="fas fa-trash"></i> Remover</button>
+                <button name="btBck" id="btBck" class="btn btn-danger" type="button" onclick="javascript:location.href='lstCliente.php'"><i class="fas fa-arrow-left" ></i> Voltar</button>
+            </form>
         </div>
 </section>
     </body>

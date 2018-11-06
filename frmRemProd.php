@@ -38,9 +38,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="lstProd.php">Produto</a>
-                    <a class="nav-item nav-link" href="#">Lista 2</a>
-                    <a class="nav-item nav-link" href="#">Lista 3</a>
+                    <a class="nav-item nav-link" href="lstProd.php">Produtos</a>
+                    <a class="nav-item nav-link" href="lstCliente.php">Clientes</a>
+                    <a class="nav-item nav-link" href="lstVenda.php">Vendas</a>
                 </div>
             </div>
             <form class="form-inline my-2 my-lg-0">
